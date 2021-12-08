@@ -1,0 +1,62 @@
+<style>
+.font
+{
+  font-family: monospace;
+  color: white;
+}
+td 
+    {
+        border: 0px solid black;
+        background-color: #16A085;
+        height: 60px;
+        border-radius: 5px;
+        padding: 9px;
+    }
+.espace
+    {
+      width: 350px;
+    }
+a
+{
+  text-decoration: none;
+  color: black;
+}
+</style>
+
+<p id="notice"><%= notice %></p>
+
+<div>
+<table width="100%">
+<td>
+<center><h1><div class="font">Categorys</div></h1></center>
+</td>
+</table>
+</div>
+<p></p>
+
+<center>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <p>
+        <h4>Name:</h4>
+        <td><h5><%= category.name %></h5></td>
+        <br>
+        <h4>Description:</h4>
+        <td><h5><%= category.description %></h5></td>
+        </p>
+        <p>
+        <td><%= link_to 'Show', category %></td>
+        <td><%= link_to 'Edit', edit_category_path(category) %></td>
+        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </p>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Category', new_category_path %>
+</center>

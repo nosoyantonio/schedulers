@@ -1,0 +1,41 @@
+<style>
+.font
+{
+  font-family: monospace;
+  color: white;
+}
+td 
+    {
+        border: 0px solid black;
+        background-color: #16A085;
+        height: 60px;
+        border-radius: 5px;
+        padding: 9px;
+    }
+.espace
+    {
+      width: 350px;
+    }
+a
+{
+  text-decoration: none;
+  color: black;
+}
+</style>
+<p></p>
+<div>
+<table width="100%">
+<td>
+<center><h1><div class="font">New Task</div></h1></center>
+</td>
+</table>
+</div>
+
+<p></p>
+
+<center>
+<%= render 'form', task: @task %>
+
+<%= link_to 'Back', tasks_path %>
+
+</center>

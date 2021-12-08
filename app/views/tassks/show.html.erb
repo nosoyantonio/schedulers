@@ -1,0 +1,60 @@
+<style>
+.font
+{
+  font-family: monospace;
+  color: white;
+}
+td 
+    {
+        border: 0px solid black;
+        background-color: #16A085;
+        height: 60px;
+        border-radius: 5px;
+        padding: 9px;
+    }
+.espace
+    {
+      width: 350px;
+    }
+a
+{
+  text-decoration: none;
+  color: black;
+}
+</style>
+<p></p>
+<div>
+<table width="100%">
+<td>
+<center><h1><div class="font">Show Task</div></h1></center>
+</td>
+</table>
+</div>
+<p></p>
+
+<center>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tassk.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @tassk.description %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @tassk.code %>
+</p>
+
+<p>
+  <strong>Due date:</strong>
+  <%= @tassk.due_date %>
+</p>
+
+<%= link_to 'Edit', edit_tassk_path(@tassk) %> |
+<%= link_to 'Back', tassks_path %>
+</center>

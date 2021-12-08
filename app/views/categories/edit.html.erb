@@ -1,0 +1,42 @@
+<style>
+.font
+{
+  font-family: monospace;
+  color: white;
+}
+td 
+    {
+        border: 0px solid black;
+        background-color: #16A085;
+        height: 60px;
+        border-radius: 5px;
+        padding: 9px;
+    }
+.espace
+    {
+      width: 350px;
+    }
+a
+{
+  text-decoration: none;
+  color: black;
+}
+</style>
+
+<p id="notice"><%= notice %></p>
+
+<div>
+<table width="100%">
+<td>
+<center><h1><div class="font">Edit Category</div></h1></center>
+</td>
+</table>
+</div>
+<p></p>
+
+<center>
+<%= render 'form', category: @category %>
+
+<%= link_to 'Show', @category %> |
+<%= link_to 'Back', categories_path %>
+</center>
